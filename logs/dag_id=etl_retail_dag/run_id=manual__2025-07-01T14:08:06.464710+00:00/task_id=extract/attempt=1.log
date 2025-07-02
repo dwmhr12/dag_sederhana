@@ -1,0 +1,16 @@
+[2025-07-01T14:08:17.172+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_retail_dag.extract manual__2025-07-01T14:08:06.464710+00:00 [queued]>
+[2025-07-01T14:08:17.215+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_retail_dag.extract manual__2025-07-01T14:08:06.464710+00:00 [queued]>
+[2025-07-01T14:08:17.217+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-07-01T14:08:17.315+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): extract> on 2025-07-01 14:08:06.464710+00:00
+[2025-07-01T14:08:17.350+0000] {standard_task_runner.py:60} INFO - Started process 215 to run task
+[2025-07-01T14:08:17.385+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_retail_dag', 'extract', 'manual__2025-07-01T14:08:06.464710+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/etl_retail.py', '--cfg-path', '/tmp/tmp0s1nbx28']
+[2025-07-01T14:08:17.402+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask extract
+[2025-07-01T14:08:17.811+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_retail_dag.extract manual__2025-07-01T14:08:06.464710+00:00 [running]> on host 3f084dede7e5
+[2025-07-01T14:08:18.151+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='dewi' AIRFLOW_CTX_DAG_ID='etl_retail_dag' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2025-07-01T14:08:06.464710+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-01T14:08:06.464710+00:00'
+[2025-07-01T14:08:18.286+0000] {base.py:83} INFO - Using connection ID 'pg_src' for task execution.
+[2025-07-01T14:08:18.375+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/common/sql/hooks/sql.py:221 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-07-01T14:08:18.502+0000] {logging_mixin.py:188} INFO - Extracted 1000 rows -> /opt/***/dags/retail_extract.csv
+[2025-07-01T14:08:18.504+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-07-01T14:08:18.538+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_retail_dag, task_id=extract, execution_date=20250701T140806, start_date=20250701T140817, end_date=20250701T140818
+[2025-07-01T14:08:18.618+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-07-01T14:08:18.736+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
